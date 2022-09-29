@@ -1,0 +1,15 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @google-cloud/functions-framework --target=hello --port=8081",
+    "deploy": "gcloud functions deploy hello --entry-point hello --source . --runtime nodejs16 --trigger-http --allow-unauthenticated --project one-for-twelve-32778 --region us-central1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^3.1.2"
+  }
+}
