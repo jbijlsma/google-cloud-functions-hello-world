@@ -1,7 +1,7 @@
 import express from "express";
 
 function getDefault(_, res) {
-  res.send("Hello!");
+  res.send("Hello ts!");
 }
 
 const app = express();
