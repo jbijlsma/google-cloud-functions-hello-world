@@ -1,5 +1,7 @@
 # Intro
 
+Example showing how to use typescript to write and deploy google cloud functions.
+
 # Local testing
 
 ```

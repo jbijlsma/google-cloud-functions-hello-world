@@ -4,12 +4,11 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "gcp-build": "npm run build",
     "build": "tsc",
     "watch": "tsc-watch --onSuccess \"npm run serve\"",
     "start": "npm run build && npm run serve",
     "serve": "npx @google-cloud/functions-framework --target=hello --port=8082",
-    "deploy": "gcloud functions deploy hello-ts --entry-point hello --source . --runtime nodejs16 --trigger-http --allow-unauthenticated --project one-for-twelve-32778 --region us-central1"
+    "deploy": "npm run build && gcloud functions deploy hello-ts --entry-point hello --source . --runtime nodejs16 --trigger-http --allow-unauthenticated --project one-for-twelve-32778 --region us-central1"
   },
   "author": "",
   "license": "ISC",

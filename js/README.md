@@ -2,7 +2,7 @@
 
 Plain javascript example of a Google Cloud Function.
 
-Minimal Google Cloud Functions that can be triggered using http.
+Minimal Google Cloud Function that can be triggered using http.
 
 # Local testing
 

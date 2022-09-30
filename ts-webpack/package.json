@@ -7,7 +7,6 @@
     "serve": "dist/*.js"
   },
   "scripts": {
-    "gcp-build": "npm run build",
     "build": "webpack",
     "watch": "npm-watch",
     "dev": "concurrently \"npm run watch\" \"webpack --watch\"",

@@ -1,5 +1,7 @@
 # Intro
 
+Example showing how to use webpack and typescript to write and deploy google cloud functions.
+
 # Local testing
 
 ```
@@ -13,12 +15,6 @@ npm run deploy
 ```
 
 # Good to know
-
-Without this line the deployment fails:
-
-```
-"gcp-build": "npm run build"
-```
 
 # Reading
 
