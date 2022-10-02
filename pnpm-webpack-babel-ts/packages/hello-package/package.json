@@ -1,0 +1,16 @@
+{
+  "name": "hello-package",
+  "version": "1.0.0",
+  "description": "A library that allows getting a hello message",
+  "main": "build/index.js",
+  "scripts": {
+    "clean": "rm -rf build tsconfig.tsbuildinfo",
+    "build": "tsc --incremental"
+  },
+  "keywords": [],
+  "author": "jeroen_bijlsma@yahoo.com",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  }
+}

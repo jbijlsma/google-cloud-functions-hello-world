@@ -47,3 +47,11 @@ You also need to update the .gcloudignore file now so the ./src folder is includ
 ## VSCode formatting issues
 
 If your file is automatically formatted in a wrong way (extra spaces in .gcloudignore file in my case) look at the type of file that was detected (right hand bottom corner in vscode). Chances are it is set to 'Markdown'. Set to to the correct type (in this case Ignore like for .gitignore files).
+
+## Typescript project references
+
+https://github.com/jrr/typescript-workspaces-example
+
+https://semaphoreci.com/blog/typescript-monorepos-with-yarn
+
+https://spin.atomicobject.com/2022/02/07/typescript-project-workspaces/
