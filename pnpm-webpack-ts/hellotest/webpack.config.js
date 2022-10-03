@@ -13,7 +13,6 @@ module.exports = {
   },
   watch: false,
   context: __dirname, // to automatically find tsconfig.json
-  target: "node", // <-- Important
   module: {
     rules: [
       {
@@ -41,5 +40,13 @@ module.exports = {
   optimization: {
     minimize: false,
   },
-  externals: [nodeExternals()], // <-- Important
+  target: "node", // important in order not to bundle built-in modules like path, fs, etc.
+  externals: [
+    nodeExternals({
+      // all dependencies in the package.json file (both dev and not dev) will be excluded
+      // from the bundle.
+      // this WILL include `@myscope/*`
+      allowlist: [/^@myscope\//],
+    }),
+  ],
 };

@@ -9,7 +9,7 @@
     "composite": true,
     "jsx": "react",
     "baseUrl": ".", // This must be specified if "paths" is.
-      "paths": {
+    "paths": {
       "packages/*": ["packages/*"]
     }
   }
