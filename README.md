@@ -48,6 +48,22 @@ You also need to update the .gcloudignore file now so the ./src folder is includ
 
 If your file is automatically formatted in a wrong way (extra spaces in .gcloudignore file in my case) look at the type of file that was detected (right hand bottom corner in vscode). Chances are it is set to 'Markdown'. Set to to the correct type (in this case Ignore like for .gitignore files).
 
+## Empty zip file when deploying to google cloud
+
+The bash script for the deploy (/scripts/gcloud-deploy.sh) uses this line:
+
+```bash
+source="${2:-.}"
+```
+
+Previously it was:
+
+```bash
+source="${2:-'.'}"
+```
+
+Not really sure why that version didn't work.
+
 ## Typescript project references
 
 https://github.com/jrr/typescript-workspaces-example
