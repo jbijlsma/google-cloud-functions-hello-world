@@ -11,8 +11,8 @@
     "watch": "npm-watch",
     "start": "concurrently \"npm run watch\" \"webpack --watch\"",
     "serve": "npx @google-cloud/functions-framework --target=hello --port=8082",
-    "publish": "cp ./dist/index.js ./publish && cp ./static/* ./publish",
-    "deploy": "npm run build && gcloud functions deploy hello-pnpm-webpack-ts --entry-point hello --source ./publish --runtime nodejs16 --trigger-http --allow-unauthenticated --project one-for-twelve-32778 --region us-central1",
+    "publish": "npm run build && cp ./dist/index.js ./publish && cp ./static/* ./publish",
+    "deploy": "npm run publish && gcloud functions deploy hello-pnpm-webpack-ts --entry-point hello --source ./publish --runtime nodejs16 --trigger-http --allow-unauthenticated --project one-for-twelve-32778 --region us-central1",
     "clean": "rm -rf dist tsconfig.tsbuildinfo",
     "uninstall": "rm -rf dist node_modules"
   },
