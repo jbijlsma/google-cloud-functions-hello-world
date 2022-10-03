@@ -1,4 +1,3 @@
 packages:
-  - apptest
   - hellotest
   - packages/*
