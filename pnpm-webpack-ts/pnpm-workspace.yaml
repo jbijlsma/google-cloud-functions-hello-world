@@ -1,0 +1,4 @@
+packages:
+  - apptest
+  - hellotest
+  - packages/*

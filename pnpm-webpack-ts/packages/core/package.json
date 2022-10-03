@@ -1,0 +1,13 @@
+{
+  "name": "@myscope/core",
+  "version": "1.0.0",
+  "description": "Core package",
+  "main": "lib/utilities.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm -rf lib tsconfig.tsbuildinfo"
+  }
+}

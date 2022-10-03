@@ -1,0 +1,19 @@
+{
+  "name": "@myscope/zoo",
+  "version": "1.0.0",
+  "description": "Zoo package",
+  "main": "lib/zoo.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@myscope/animals": "workspace:*",
+    "@types/react": "^18.0.21",
+    "react": "^18.2.0"
+  },
+  "scripts": {
+    "clean": "rm -rf lib tsconfig.tsbuildinfo",
+    "uninstall": "rm -rf node_modules"
+  }
+}
