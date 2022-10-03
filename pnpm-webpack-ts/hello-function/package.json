@@ -1,5 +1,5 @@
 {
-  "name": "pnpm-webpack-ts",
+  "name": "pnpm-webpack-ts-hello-function",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -12,7 +12,7 @@
     "start": "concurrently \"npm run watch\" \"webpack --watch\"",
     "serve": "npx @google-cloud/functions-framework --target=hello --port=8082",
     "publish": "npm run build && cp ./dist/index.js ./publish && cp ./static/* ./publish",
-    "deploy": "npm run publish && gcloud functions deploy hello-pnpm-webpack-ts --entry-point hello --source ./publish --runtime nodejs16 --trigger-http --allow-unauthenticated --project one-for-twelve-32778 --region us-central1",
+    "deploy": "npm run publish && ../../scripts/gcloud-deploy.sh hello-pnpm-webpack-ts ./publish",
     "clean": "rm -rf dist tsconfig.tsbuildinfo",
     "uninstall": "rm -rf dist node_modules"
   },
@@ -26,7 +26,7 @@
     "express": "^4.18.1"
   },
   "devDependencies": {
-    "@myscope/hello": "workspace:*",
+    "@myscope/hello-package": "workspace:*",
     "@google-cloud/functions-framework": "^3.1.2",
     "concurrently": "^7.4.0",
     "npm-watch": "^0.11.0",

@@ -5,10 +5,10 @@ importers:
   .:
     specifiers: {}
 
-  hellotest:
+  hello-function:
     specifiers:
       '@google-cloud/functions-framework': ^3.1.2
-      '@myscope/hello': workspace:*
+      '@myscope/hello-package': workspace:*
       '@types/express': ^4.17.14
       '@types/express-serve-static-core': ^4.17.31
       '@types/node': ^18.8.0
@@ -27,7 +27,7 @@ importers:
       express: 4.18.1
     devDependencies:
       '@google-cloud/functions-framework': 3.1.2
-      '@myscope/hello': link:../packages/hello
+      '@myscope/hello-package': link:../packages/hello-package
       '@types/express': 4.17.14
       '@types/express-serve-static-core': 4.17.31
       '@types/node': 18.8.0
@@ -42,7 +42,7 @@ importers:
       webpack-dev-server: 4.11.1_5v66e2inugklgvlh4huuavolfq
       webpack-node-externals: 3.0.0
 
-  packages/hello:
+  packages/hello-package:
     specifiers: {}
 
 packages:

@@ -1,5 +1,5 @@
 {
-  "name": "@myscope/hello",
+  "name": "@myscope/hello-package",
   "version": "1.0.0",
   "description": "Core package",
   "main": "lib/hello.js",

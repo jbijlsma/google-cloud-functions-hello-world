@@ -2,10 +2,10 @@
   "name": "js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "start": "npx @google-cloud/functions-framework --target=hello --port=8081",
-    "deploy": "gcloud functions deploy hello --entry-point hello --source . --runtime nodejs16 --trigger-http --allow-unauthenticated --project one-for-twelve-32778 --region us-central1"
+    "deploy": "../scripts/gcloud-deploy.sh hello-js"
   },
   "author": "",
   "license": "ISC",

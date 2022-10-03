@@ -1,5 +1,5 @@
 {
-  "name": "ts",
+  "name": "webpack-ts",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
     "watch": "npm-watch",
     "dev": "concurrently \"npm run watch\" \"webpack --watch\"",
     "serve": "npx @google-cloud/functions-framework --target=hello --port=8082",
-    "deploy": "npm run build && gcloud functions deploy hello-webpack-ts --entry-point hello --source . --runtime nodejs16 --trigger-http --allow-unauthenticated --project one-for-twelve-32778 --region us-central1"
+    "deploy": "npm run build && ../scripts/gcloud-deploy.sh hello-webpack-ts"
   },
   "author": "",
   "license": "ISC",

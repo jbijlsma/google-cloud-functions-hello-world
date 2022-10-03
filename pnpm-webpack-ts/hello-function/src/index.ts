@@ -1,6 +1,6 @@
 import express from "express";
 
-import { getHelloMsg } from "@myscope/hello";
+import { getHelloMsg } from "@myscope/hello-package";
 
 function getDefault(_, res) {
   res.send(getHelloMsg());

@@ -7,7 +7,7 @@
   },
   "references": [
     {
-      "path": "../packages/hello"
+      "path": "../packages/hello-package"
     }
   ]
 }

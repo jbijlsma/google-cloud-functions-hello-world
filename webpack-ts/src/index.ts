@@ -1,7 +1,7 @@
 import express from "express";
 
 function getDefault(_, res) {
-  res.send("Hello ts-webpack!");
+  res.send("Hello webpack-ts");
 }
 
 const app = express();

@@ -1,5 +1,5 @@
 {
-  "name": "project-references-demo",
+  "name": "pnpm-webpack-ts",
   "private": true,
   "workspaces": [
     "packages/*"
