@@ -1,8 +1,8 @@
 {
-  "name": "@myscope/hello-package",
+  "name": "@myscope/messages-package",
   "version": "1.0.0",
-  "description": "Core package",
-  "main": "lib/hello.js",
+  "description": "Messages package",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },

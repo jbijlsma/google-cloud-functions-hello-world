@@ -7,7 +7,7 @@
   },
   "references": [
     {
-      "path": "../packages/hello-package"
+      "path": "../packages/messages-package"
     }
   ]
 }
