@@ -9,5 +9,11 @@
   "license": "ISC",
   "scripts": {
     "clean": "rm -rf lib tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "fast-csv": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.0"
   }
 }

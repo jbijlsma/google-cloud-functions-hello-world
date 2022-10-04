@@ -1,10 +1,18 @@
 import express from "express";
 
-import { getHelloMsg, getGoodbyeMsg } from "@myscope/messages-package";
+import {
+  getHelloMsg,
+  getGoodbyeMsg,
+  getWords,
+} from "@myscope/messages-package";
 
-function getDefault(_, res) {
-  res.send(`${getHelloMsg()} and ${getGoodbyeMsg()}`);
-}
+const getDefault = async (_, res) => {
+  const words = await getWords();
+  const msg = `${getHelloMsg()} and ${getGoodbyeMsg()}. File ${__dirname}/words.csv has ${
+    words.length
+  } words`;
+  res.send(msg);
+};
 
 const app = express();
 app.use(getDefault);

@@ -2,15 +2,16 @@
   "name": "pnpm-webpack-ts-hello-function",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "index.js",
   "watch": {
     "serve": "dist/*.js"
   },
   "scripts": {
     "build": "webpack",
     "watch": "npm-watch",
-    "start": "concurrently \"npm run watch\" \"webpack --watch\"",
-    "serve": "npx @google-cloud/functions-framework --target=hello --port=8082",
+    "start": "npm run copy-resources && concurrently \"npm run watch\" \"webpack --watch\"",
+    "serve": "npx @google-cloud/functions-framework --target=hello --source ./dist/ --port=8082",
+    "copy-resources": "cp ./resources/* ./dist",
     "publish": "npm run build && cp ./dist/index.js ./publish && cp ./static/* ./publish",
     "deploy": "npm run publish && ../../scripts/gcloud-deploy.sh hello-pnpm-webpack-ts ./publish",
     "clean": "rm -rf dist tsconfig.tsbuildinfo",

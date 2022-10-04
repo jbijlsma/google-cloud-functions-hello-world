@@ -60,3 +60,7 @@ Getting all the pieces of this puzzle working turned out to be quite challenging
 4. deployment to google cloud. When using 'gcloud functions deploy' gcloud needs 2 files at a minimum: 1) a js file with the code, 2) a package.json file with the runtime dependecies. It will first run 'npm install --production', which makes sense because the runtime dependencies are not included in our bundle. That will fail with our package.json though because it contains workspace devDependencies (@myscope/). It would be nice if npm would not look at the devDepencies at all when running with --production, but apparently it does. Npm install can be run with a switch that ignores these errors, but google cloud does not add that switch. Locally we use pnpm, which can handle this. The workaround I chose is to create a ./static folder with a package.json specifically meant to be deployed to google cloud. Note that this package.json could be generated from the original package.json as well, but at the moment it is not. The publish script in the original package.json builds webpack bundle and then copies that bundle (index.js) and the package.json in the ./static folder to the ./publish folder and uploads only that folder to google cloud. For that it uses some .gcloudignore trickery.
 
 See the root README for a bit more background info on the use of .gcloudignore.
+
+# \_\_dirName
+
+When running 'functions-framework --source ./dist/' reading a file like this './words.csv' did not work. Even though \_\_dirName is now set correctly to the absolute path of the ./dist/ folder.

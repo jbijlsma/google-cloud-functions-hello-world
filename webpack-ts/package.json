@@ -10,7 +10,7 @@
     "build": "webpack",
     "watch": "npm-watch",
     "dev": "concurrently \"npm run watch\" \"webpack --watch\"",
-    "serve": "npx @google-cloud/functions-framework --target=hello --port=8082",
+    "serve": "npx @google-cloud/functions-framework --source dist --target=hello --port=8082",
     "deploy": "npm run build && ../scripts/gcloud-deploy.sh hello-webpack-ts"
   },
   "author": "",
