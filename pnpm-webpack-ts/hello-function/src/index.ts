@@ -1,9 +1,9 @@
 import express from "express";
 
-import { Messages } from "@myscope/messages-package";
+import { getHelloMsg, getGoodbyeMsg } from "@myscope/messages-package";
 
 function getDefault(_, res) {
-  res.send(Messages.getGoodbyeMsg());
+  res.send(`${getHelloMsg()} and ${getGoodbyeMsg()}`);
 }
 
 const app = express();

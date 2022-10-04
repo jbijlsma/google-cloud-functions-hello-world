@@ -1,7 +1,4 @@
-import { getHelloMsg as myGetHelloMsg } from "./hello";
-import { getGoodbyeMsg as myGetGoodbyeMsg } from "./goodbye";
+import { getHelloMsg } from "./hello";
+import { getGoodbyeMsg } from "./goodbye";
 
-export namespace Messages {
-  export const getHelloMsg = myGetHelloMsg;
-  export const getGoodbyeMsg = myGetGoodbyeMsg;
-}
+export { getHelloMsg, getGoodbyeMsg };
